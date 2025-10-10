@@ -57,11 +57,14 @@ body {
 
 .logo {
     width: 200px;
+    margin-top: 20px;
+    margin-left: 30px;
     cursor: pointer;
 }
 
 .content {
     top: 50%;
+    margin-left: 30px;
     position: absolute;
     transform: translateY(-50%);
     color: #fff;
@@ -77,10 +80,48 @@ body {
 }
 
 .content button {
+  margin-top: 20px;
     background: transparent;
     border: 2px solid #fff;
     outline: none;
     padding: 12px 25px;
     color: #fff;
     cursor: pointer;
+    transition: .5s;
+}
+
+.content button:hover {
+  background-color: #c9b379;
+}
+
+.launch-time {
+  display: flex;
+}
+
+.launch-time div {
+  flex-basis: 100px;
+}
+
+.launch-time div p {
+  font-size: 60px;
+  margin-bottom: -14px;
+}
+
+.rocket {
+  width: 250px;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  animation: rocket 4s linear infinite;
+}
+
+@keyframes rocket {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 105%;
+    opacity: 1;
+  }
 }
